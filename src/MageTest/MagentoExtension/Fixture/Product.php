@@ -139,7 +139,7 @@ class Product implements FixtureInterface
 
     protected function getDefaultAttributes()
     {
-        if ($this->defaultAttributes[$this->model->getTypeId()]) {
+        if (isset($this->defaultAttributes[$this->model->getTypeId()])) {
             return $this->defaultAttributes[$this->model->getTypeId()];
         }
         $eavAttributes = $this->model->getAttributes();
